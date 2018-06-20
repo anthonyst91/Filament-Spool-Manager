@@ -1,0 +1,49 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="colorControlNormal">@color/colorPrimaryDark</item>
+        <item name="colorControlActivated">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="AppButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:hapticFeedbackEnabled">true</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:background">@drawable/shape_button_primary_background</item>
+        <item name="android:padding">50dp</item>
+    </style>
+
+    <style name="AppEditTextStyle">
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_margin">50dp</item>
+        <item name="android:inputType">numberDecimal</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:gravity">center</item>
+        <item name="android:cursorVisible">true</item>
+    </style>
+
+    <style name="AppTextInputLayoutStyle" parent="Widget.Design.TextInputLayout">
+        <item name="android:textSize">30sp</item>
+
+        <!-- Hint color in not focused mode -->
+        <item name="android:textColorHint">@color/colorPrimaryDark</item>
+        <!-- Line color in not focused mode -->
+        <item name="colorControlNormal">@color/colorPrimaryDark</item>
+        <!-- Hint and line color in focused mode -->
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <!-- Hint and line color in focused mode + error -->
+        <item name="colorAccent">@color/colorPrimary</item>
+        <!-- Focused and pressed -->
+        <item name="colorControlHighlight">@color/colorPrimaryDark</item>
+    </style>
+
+
+</resources>

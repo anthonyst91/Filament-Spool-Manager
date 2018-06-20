@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">Filament Spool Manager AIDL</string>
+
+    <string name="edt_input_length_hint">Input length (m)</string>
+    <string name="btn_send_input_label">Send input</string>
+
+</resources>
