@@ -110,7 +110,7 @@ And finally, send the input value to Filament Spool Manager:
     }
 ```
 
- # Screenshots
+ ## Screenshots
  
  When you input a filament length (or weight) remotely from a third-party application, Filament Spool Manager opens the list of available spools and allows you to input the value on the spool of your choice.
  
@@ -119,3 +119,21 @@ Once the spool is updated, Filament Spool Manager will close itself.
 ![Select spool for input](https://image.ibb.co/hdHhN8/Screenshot_1529524889_framed.png)
 
 ![Input value on selected spool](https://preview.ibb.co/kjKkaT/Screenshot_1529524895_framed.png)
+
+## License
+
+```
+Copyright 2015 Square, Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
