@@ -8,6 +8,10 @@ Filament Spool Manager allows you to manage your stock of filaments for your 3D 
 
 With the interface (as an AIDL file), you will be able to communicate a filament lenght (or weight) input to Filament Spool Manager.
 
+## Pre-requisited
+
+Filament Spool Manager is compatible with **API level 16+** (Jelly Bean)
+
 ## How does it work
 
 It is very easy. In your own app, include the .aidl interface file in your /src/main/ folder. Don't change the package name (see in the sample app). It should be located at : 
@@ -31,6 +35,10 @@ Please note that:
 * Lenght is in meters (m) and weight is in grams (g)
 
 ## How to connect to the service
+
+First you have to ensure that Filament Spool Manager is properly installed on the device. Otherwise you wont be able to connect to the IPC, of course.
+
+And don't forget that Filament Spool Manager is compatible with Android API level 16+. The app should be not installed with Android version below API 16, but it can be a great idea to check the compatibility before.
 
 Create your remote service connection object:
 
