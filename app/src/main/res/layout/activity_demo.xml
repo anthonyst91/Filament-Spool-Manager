@@ -8,12 +8,33 @@
     tools:context=".DemoActivity">
 
     <android.support.design.widget.TextInputLayout
+        android:id="@+id/til_label"
+        style="@style/AppTextInputLayoutStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/edt_input_label_hint"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/til_value"
+        app:layout_constraintVertical_chainStyle="packed">
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/edt_label"
+            style="@style/AppEditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nextFocusDown="@+id/edt_value"
+            android:imeOptions="actionNext"
+            android:inputType="text"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
         android:id="@+id/til_value"
         style="@style/AppTextInputLayoutStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/edt_input_length_hint"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_label"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/btn_send_input"
@@ -23,7 +44,8 @@
             style="@style/AppEditTextStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:nextFocusDown="@+id/edt_label"/>
+            android:nextFocusUp="@+id/edt_label"
+            android:nextFocusDown="@+id/btn_send_input"/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.v7.widget.AppCompatButton

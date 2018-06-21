@@ -2,6 +2,6 @@ package com.printing3d.spoolsmanager;
 
 interface IInputConsumptionService {
 
-    boolean selectSpoolAndInput(float length, float weight);
+    boolean selectSpoolAndInput(String label, float length, float weight);
 
 }

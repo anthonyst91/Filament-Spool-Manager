@@ -4,9 +4,9 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.ServiceConnection
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.IBinder
+import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.widget.Toast
 import com.printing3d.spoolsmanager.IInputConsumptionService
@@ -56,6 +56,7 @@ class DemoActivity : AppCompatActivity() {
      */
     private fun sendInput() {
         try {
+            val labelInput = edt_label.text.toString()
             val lengthInput = edt_value.text.toString().toFloat()
 
             if (lengthInput <= 0) {
@@ -68,7 +69,7 @@ class DemoActivity : AppCompatActivity() {
              * You can also send weight input, so you should specify length to 0f.
              * If provided length > 0, it will have the highest priority, even if
              * a weight > 0 is provided. */
-            service?.selectSpoolAndInput(lengthInput, 0f)
+            service?.selectSpoolAndInput(labelInput, lengthInput, 0f)
 
         } catch (e: NumberFormatException) {
             Toast.makeText(this@DemoActivity, "Invalid number format", Toast.LENGTH_LONG).show()
