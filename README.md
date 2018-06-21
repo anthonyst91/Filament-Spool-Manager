@@ -22,7 +22,7 @@ It is very easy. In your own app, include the .aidl interface file in your /src/
 In this interface, you have one (and only one for the moment) method to call:
 
 ``` java
-    boolean selectSpoolAndInput(float length, float weight);
+    boolean selectSpoolAndInput(String label, float length, float weight);
 ```
 This will open the Filament Spool Manager on a spool selector screen to input the value you've passed.
 
@@ -101,7 +101,8 @@ And finally, send the input value to Filament Spool Manager:
 ``` kotlin
     private fun sendInput() {
         try {
-            val lengthInput = edt_value.text.toString().toFloat()
+            val lengthLabel: String = [...]
+            val lengthInput: Float = [...]
 
             if (lengthInput <= 0) {
                 Toast.makeText(this@DemoActivity,
@@ -110,7 +111,7 @@ And finally, send the input value to Filament Spool Manager:
             }
             
             // Send the input value to the service
-            service?.selectSpoolAndInput(lengthInput, 0f)
+            service?.selectSpoolAndInput(lengthLabel, lengthInput, 0f)
 
         } catch (e: NumberFormatException) {
             Toast.makeText(this@DemoActivity, "Invalid number format", Toast.LENGTH_LONG).show()
