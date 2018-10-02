@@ -1,16 +1,16 @@
-# Filament Spool Manager Interface 
+# RollingUp Interface 
 
-This project is made as an example of interface with the Android app "Filament Spool Manager":
+This project is made as an example of interface with the Android app "RollingUp":
 
-[Filament Spool Manager on Google Play](https://play.google.com/store/apps/details?id=com.printing3d.spoolsmanager)
+[RollingUp on Google Play](https://play.google.com/store/apps/details?id=com.printing3d.spoolsmanager)
 
-Filament Spool Manager allows you to manage your stock of filaments for your 3D printer(s).
+RollingUp allows you to manage your stock of filaments for your 3D printer(s).
 
-With the interface (as an AIDL file), you will be able to communicate a filament lenght (or weight) input to Filament Spool Manager.
+With the interface (as an AIDL file), you will be able to communicate a filament lenght (or weight) input to RollingUp.
 
 ## Pre-requisited
 
-Filament Spool Manager is compatible with **API level 16+** (Jelly Bean)
+RollingUp is compatible with **API level 16+** (Jelly Bean)
 
 ## How does it work
 
@@ -24,7 +24,7 @@ In this interface, you have one (and only one for the moment) method to call:
 ``` java
     boolean selectSpoolAndInput(String label, float length, float weight);
 ```
-This will open the Filament Spool Manager on a spool selector screen to input the value you've passed.
+This will open RollingUp on a spool selector screen to input the value you've passed.
 
 Please note that:
 
@@ -36,9 +36,9 @@ Please note that:
 
 ## How to connect to the service
 
-First you have to ensure that Filament Spool Manager is properly installed on the device. Otherwise you wont be able to connect to the IPC, of course.
+First you have to ensure that RollingUp is properly installed on the device. Otherwise you wont be able to connect to the IPC, of course.
 
-And don't forget that Filament Spool Manager is compatible with Android API level 16+. The app should be not installed with Android version below API 16, but it can be a great idea to check the compatibility before.
+And don't forget that RollingUp is compatible with Android API level 16+. The app should be not installed with Android version below API 16, but it can be a great idea to check the compatibility before.
 
 Create your remote service connection object:
 
@@ -121,7 +121,7 @@ And finally, send the input value to Filament Spool Manager:
 
  ## Screenshots
  
- When you input a filament length (or weight) remotely from a third-party application, Filament Spool Manager opens the list of available spools and allows you to input the value on the spool of your choice.
+ When you input a filament length (or weight) remotely from a third-party application, RollingUp opens the list of available spools and allows you to input the value on the spool of your choice.
  
 Once the spool is updated, Filament Spool Manager will close itself.
  
